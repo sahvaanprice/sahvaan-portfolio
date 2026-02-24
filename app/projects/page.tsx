@@ -8,7 +8,8 @@ export default function ProjectsPage() {
       <div className="grid gap-6 sm:grid-cols-2">
         <ProjectCard
           title="Gym Database System"
-          description="Designed relational database and dashboards for membership tracking and revenue analytics."
+          description="Built a SQL Server databse and Power BI reporting system to track memberships, payments,
+          and revenue peformance, enabling data driven operational decisions and automate performance monitoring."
           tech={["SQL Server", "Database Design", "Power BI"]}
           github="https://github.com/sahvaanprice/planet3-gym-analytics-system"
         />

@@ -11,7 +11,7 @@ export default function HomePage() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 rounded-full border border-teal-100 bg-teal-50 px-3 py-1 text-sm font-medium text-teal-800">
           <span className="h-2 w-2 rounded-full bg-teal-500" />
-          Analytics • Systems • Strategy
+          Business Systems • Data Analytics • Decision Support
         </div>
 
         <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight leading-[1.05]">
@@ -21,7 +21,10 @@ export default function HomePage() {
         <div className="h-1 w-16 rounded-full bg-teal-500" />
 
         <p className="text-lg sm:text-xl text-zinc-600 max-w-2xl leading-relaxed">
-         Analytics & Business Systems Analyst transforming complex data into actionable business decisions.
+         Business Systems & Data Analytics student (May 2026) building SQL + Power BI solutions that turn messy data into clear, decision-ready insight.
+        </p>
+        <p className="text-lg sm:text-xl text-zinc-600 max-w-2xl leading-relaxed">
+         Experience: Business Systems Analyst Intern (Marathon Petroleum Company) • IT Intern (Spartan Chemical)
         </p>
 
         {/* Buttons */}
@@ -99,9 +102,9 @@ export default function HomePage() {
 
         <div className="grid gap-6 sm:grid-cols-2">
           <ProjectCard
-            title="Gym Database System"
-            description="Designed a relational database and reporting layer to track memberships, subscriptions, and revenue trends."
-            tech={["SQL Server", "Database Design", "Power BI"]}
+            title="Planet 3 Gym Membership & Analytics System"
+            description="Built a SQL Server database and Power BI dashboard to track membership, class registrations, payments, and subscription revenue to support operational reporting and performance monitoring."
+            tech={["SQL Server", "Database Design", "Power BI", "Data Modeling"]}
             github="https://github.com/sahvaanprice/planet3-gym-analytics-system"
           />
         </div>
