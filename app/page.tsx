@@ -103,7 +103,8 @@ export default function HomePage() {
         <div className="grid gap-6 sm:grid-cols-2">
           <ProjectCard
             title="Planet 3 Gym Membership & Analytics System"
-            description="Built a SQL Server database and Power BI dashboard to track membership, class registrations, payments, and subscription revenue to support operational reporting and performance monitoring."
+            description="Designed a SQL Server database and Power BI reporting layer to centralize membership, payment,
+            and revenue tracking—improving operational visibility and enabling automated performance monitoring."
             tech={["SQL Server", "Database Design", "Power BI", "Data Modeling"]}
             github="https://github.com/sahvaanprice/planet3-gym-analytics-system"
           />

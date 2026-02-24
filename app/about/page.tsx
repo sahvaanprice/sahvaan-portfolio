@@ -12,10 +12,10 @@ export default function AboutPage() {
         <div className="h-1 w-16 rounded-full bg-teal-500" />
 
         <p className="text-lg text-zinc-600 max-w-3xl leading-relaxed">
-          I’m Sahvaan Price, an Information Systems student graduating May 2026 focused 
-          on analytics, business systems, and decision support. I transform complex 
-          data into data-driven solutions that help organizations understand performance, 
-          optimize processes, and make confident business decisions.
+          I’m Sahvaan Price, an Information Systems student graduating May 2026
+          focused on analytics, business systems, and decision support. I enjoy
+          turning complex information into structured insights that help teams
+          understand performance, improve processes, and make better decisions.
         </p>
       </section>
 
@@ -41,17 +41,18 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold tracking-tight">My Story</h2>
 
         <p className="text-zinc-600 leading-relaxed">
-            I'm drawn to the intersection of business, systems and analytics, where
-          complez problems becom clear through data. Studying Information Systems
-          has shaped how I approach challenges: understanding how processes,
-          technology, and people connect to drive better decisions.
+           I’m drawn to the intersection of business, systems, and analytics —
+          where complex problems become clearer through data. Studying
+          Information Systems shaped how I think about organizations: not just
+          through technology, but through how people, processes, and systems
+          work together.
         </p>
 
         <p className="text-zinc-600 leading-relaxed">
-            I enjoy transforming data into structured insights, building dashboards
-          that tell meaningful stories, and translating technical information into
-          outcomes teams can act on. My goal is to help organizations understand
-          performance, improve operations, and make confident strategic decisions.
+            I enjoy building dashboards, structuring data models, and translating
+          technical information into insights teams can actually act on. My work
+          focuses on making information accessible so decisions feel informed
+          rather than uncertain.
         </p>
 
         <p className="text-zinc-600 leading-relazed">
