@@ -1,4 +1,5 @@
 "use client";
+
 import Container from "./components/Container";
 import Link from "next/link";
 import ProjectCard from "./components/ProjectCard";
@@ -21,10 +22,12 @@ export default function HomePage() {
         <div className="h-1 w-16 rounded-full bg-teal-500" />
 
         <p className="text-lg sm:text-xl text-zinc-600 max-w-2xl leading-relaxed">
-         Business Systems & Data Analytics student (May 2026) building SQL + Power BI solutions that turn messy data into clear, decision-ready insight.
+          Business Systems & Data Analytics student (May 2026) building SQL + Power BI
+          solutions that turn messy data into clear, decision-ready insight.
         </p>
+
         <p className="text-lg sm:text-xl text-zinc-600 max-w-2xl leading-relaxed">
-         Experience: Business Systems Analyst Intern (Marathon Petroleum Company) • IT Intern (Spartan Chemical)
+          Experience: Business Systems Analyst Intern (Marathon Petroleum Company) • IT Intern (Spartan Chemical)
         </p>
 
         {/* Buttons */}
@@ -67,25 +70,30 @@ export default function HomePage() {
 
       {/* SKILLS STRIP */}
       <section className="flex flex-wrap gap-2">
-        {["SQL", "Power BI", "Python", "Data Visualization", "Business Analysis", "Dashboard Development", "Process Improvement", "Systems Analysis"].map(
-          (skill) => (
-            <span
-              key={skill}
-              className="rounded-full border border-teal-100 bg-teal-50 px-4 py-2 text-sm font-medium text-teal-800"
-            >
-              {skill}
-            </span>
-          )
-        )}
+        {[
+          "SQL",
+          "Power BI",
+          "Python",
+          "Data Visualization",
+          "Business Analysis",
+          "Dashboard Development",
+          "Process Improvement",
+          "Systems Analysis",
+        ].map((skill) => (
+          <span
+            key={skill}
+            className="rounded-full border border-teal-100 bg-teal-50 px-4 py-2 text-sm font-medium text-teal-800"
+          >
+            {skill}
+          </span>
+        ))}
       </section>
 
       {/* FEATURED PROJECTS */}
       <section className="space-y-6">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight">
-              Featured Projects
-            </h2>
+            <h2 className="text-3xl font-semibold tracking-tight">Featured Projects</h2>
             <p className="mt-2 text-zinc-600 max-w-2xl">
               A few projects that show my analytics, database, and storytelling skills.
             </p>
@@ -103,10 +111,10 @@ export default function HomePage() {
         <div className="grid gap-6 sm:grid-cols-2">
           <ProjectCard
             title="Planet 3 Gym Membership & Analytics System"
-            description="Designed a SQL Server database and Power BI reporting layer to centralize membership, payment,
-            and revenue tracking—improving operational visibility and enabling automated performance monitoring."
+            description="Designed a SQL Server database and Power BI reporting layer to centralize membership, payment, and revenue tracking—improving operational visibility and enabling automated performance monitoring."
             tech={["SQL Server", "Database Design", "Power BI", "Data Modeling"]}
             github="https://github.com/sahvaanprice/planet3-gym-analytics-system"
+            image="/images/planet3-dashboard.png"
           />
         </div>
 
