@@ -45,6 +45,40 @@ export default function CertificationsPage() {
           </Link>
         ))}
       </section>
+
+       <section className="space-y-6">
+        <h2 className="text-2xl font-semibold tracking-tight">
+          Currently Pursuing
+        </h2>
+
+        <div className="grid gap-6 sm:grid-cols-2">
+          {[
+            {
+              title: "Microsoft Power BI Data Analyst Associate (PL-300)",
+              organization: "Microsoft",
+            },
+            {
+              title: "Lean Six Sigma Green Belt",
+              organization: "Coursera",
+            },
+          ].map((cert) => (
+            <div
+              key={cert.title}
+              className="rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-6"
+            >
+              <p className="text-sm text-zinc-500">{cert.organization}</p>
+
+              <h3 className="mt-2 text-lg font-semibold text-zinc-900">
+                {cert.title}
+              </h3>
+
+              <span className="mt-3 inline-block text-xs font-medium text-teal-700 bg-teal-100 px-3 py-1 rounded-full">
+                In Progress
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
     </Container>
   );
 }

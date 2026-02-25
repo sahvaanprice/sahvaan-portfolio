@@ -128,6 +128,44 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <section className="space-y-6">
+  <div>
+    <h2 className="text-3xl font-semibold tracking-tight">
+      Currently Building
+    </h2>
+
+    <p className="mt-2 text-zinc-600 max-w-2xl">
+      Projects I'm actively developing as I continue improving my analytics,
+      systems, and decision-support skills.
+    </p>
+  </div>
+
+  <div className="grid gap-6 sm:grid-cols-2">
+    {[
+      {
+        title: "Financial Trend Dashboard",
+        desc: "Developing an interactive financial analytics dashboard focused on identifying trends, spending patterns, and performance indicators.",
+      },
+      {
+        title: "Behavioral Analytics & Engagment Anlaysis",
+        desc: "Exploring user behavior patterns using Python to analyze engagement, activity trends, and retention indicators.",
+      },
+    ].map((item) => (
+      <div
+        key={item.title}
+        className="rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-6"
+      >
+        <h3 className="font-semibold text-zinc-900">{item.title}</h3>
+        <p className="mt-2 text-sm text-zinc-600">{item.desc}</p>
+
+        <span className="inline-block mt-4 text-xs font-medium text-teal-700 bg-teal-100 px-3 py-1 rounded-full">
+          In Progress
+        </span>
+      </div>
+    ))}
+  </div>
+</section>
     </Container>
   );
 }
