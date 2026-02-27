@@ -149,7 +149,7 @@ export default function HomePage() {
       },
       {
         title: "Behavioral Analytics & Engagment Anlaysis",
-        desc: "Exploring user behavior patterns using Python to analyze engagement, activity trends, and retention indicators.",
+        desc: "Exploring user engagement patterns using SQL Server to generate behavior trends, retention indicators, and activity insights that support data-driven decision making.",
       },
     ].map((item) => (
       <div
