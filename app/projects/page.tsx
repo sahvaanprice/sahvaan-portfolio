@@ -47,9 +47,9 @@ export default function ProjectsPage() {
               tech: [],
             },
             {
-              title: "User Behavioral Analytics (Python)",
+              title: "User Behavioral Analytics",
               description:
-                "Exploring user engagement patterns using Python to analyze behavior trends, retention indicators, and activity insights that support data-driven decision making.",
+                "Exploring user engagement patterns using SQL Server to generate behavior trends, retention indicators, and activity insights that support data-driven decision making.",
               tech:[],
             },
           ].map((project) => (
