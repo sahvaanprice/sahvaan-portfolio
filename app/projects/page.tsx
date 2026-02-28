@@ -45,7 +45,7 @@ export default function ProjectsPage() {
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">Next Plans</h2>
             <p className="mt-2 text-zinc-600 max-w-2xl">
-              Projects I plan developing as I continue improving my analytics,
+              Projects I plan on developing as I continue improving my analytics,
               systems, and decision-support skills.
             </p>
           </div>
