@@ -12,7 +12,7 @@ export default function ProjectsPage() {
         </p>
       </header>
 
-      {/* ✅ use a vertical stack so spacing is consistent */}
+      {/* use a vertical stack so spacing is consistent */}
       <div className="mt-10 space-y-16">
         {/* PROJECTS GRID */}
         <div className="grid gap-6 sm:grid-cols-2">

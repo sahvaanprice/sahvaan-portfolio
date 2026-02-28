@@ -120,7 +120,7 @@ export default function HomePage() {
             title="CineWave User Behavior Analytics"
             description="Designed and built a simulated streaming analytics architecture to analyze user funnels, watch behavior, ad exposure, and premium upgrade conversion using SQL Server and Power BI."
             tech={["SQL Server", "Database Design", "Power BI", "Data Modeling"]}
-            github="https://github.com/sahvaanprice/cinewave_user_behavior_analytics"
+            github="https://github.com/sahvaanprice/cinewave-user-behavior-analytics"
             status="In Progress"
             image="/images/cinewave_executive_dashboard.png" 
           />
