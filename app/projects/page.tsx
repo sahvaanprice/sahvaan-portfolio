@@ -12,82 +12,89 @@ export default function ProjectsPage() {
         </p>
       </header>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        <ProjectCard
-          title="Planet3 Gym Membership Analytics System"
-          description="Designed a SQL Server database and Power BI reporting layer to centralize membership, payment, and revenue tracking—improving operational visibility and enabling automated performance monitoring."
-          tech={[
-            "SQL Server",
-            "Database Design",
-            "Power BI",
-            "Data Modeling",
-            "Analytics Dashboard",
-          ]}
-          github="https://github.com/sahvaanprice/planet3-gym-analytics-system"
-          image="/images/planet3-dashboard.png"
-        />
-      </div>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold tracking-tight">
-          Currently Building
-        </h2>
-
-        <p className="text-zinc-600 max-w-2xl">
-          Active projects exploring financial analytics, behavioral insights,
-          and Python-driven data analysis.
-        </p>
-
+      {/* ✅ use a vertical stack so spacing is consistent */}
+      <div className="mt-10 space-y-16">
+        {/* PROJECTS GRID */}
         <div className="grid gap-6 sm:grid-cols-2">
-          {[
-            {
-              title: "Financial Trend Dashboard",
-              description:
-                "Developing an interactive financial analytics dashboard focused on identifying revenue trends, spending patterns, and performance indicators to support budgeting and forecasting decisions.",
-              tech: [],
-            },
-            {
-              title: "User Behavioral Analytics",
-              description:
-                "Exploring user engagement patterns using SQL Server to generate behavior trends, retention indicators, and activity insights that support data-driven decision making.",
-              tech:[],
-            },
-          ].map((project) => (
-            <div
-              key={project.title}
-              className="rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-6"
-            >
-              <h3 className="text-lg font-semibold text-zinc-900">
-                {project.title}
-              </h3>
+          <ProjectCard
+            title="Planet3 Gym Membership Analytics System"
+            description="Designed a SQL Server database and Power BI reporting layer to centralize membership, payment, and revenue tracking—improving operational visibility and enabling automated performance monitoring."
+            tech={[
+              "SQL Server",
+              "Database Design",
+              "Power BI",
+              "Data Modeling",
+              "Analytics Dashboard",
+            ]}
+            github="https://github.com/sahvaanprice/planet3-gym-analytics-system"
+            image="/images/planet3-dashboard.png"
+          />
 
-              <p className="mt-2 text-sm text-zinc-600">
-                {project.description}
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full border border-teal-100 bg-teal-50 px-3 py-1 text-xs font-medium text-teal-800"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <span className="inline-block mt-5 text-xs font-medium text-teal-700 bg-teal-100 px-3 py-1 rounded-full">
-                In Progress
-              </span>
-            </div>
-          ))}
+          <ProjectCard
+            title="CineWave User Behavior Analytics"
+            description="Designed and built a simulated streaming analytics architecture to analyze user funnels, watch behavior, ad exposure, and premium upgrade conversion using SQL Server and Power BI."
+            tech={["SQL Server", "Database Design", "Power BI", "Data Modeling"]}
+            github="https://github.com/sahvaanprice/cinewave-user-behavior-analytics"
+            status="In Progress"
+            image="/images/cinewave_executive_dashboard.png"
+          />
         </div>
-      </section>     
-      <div className="mt-12 border-t border-zinc-200 pt-6">
-        <p className="text-sm text-zinc-500">
-          Every project represents something I wanted to understand better —
-          whether that’s data, systems, or how decisions get made behind the scenes.
-        </p>
+
+        {/* NEXT PLANS */}
+        <section className="space-y-6">
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight">Next Plans</h2>
+            <p className="mt-2 text-zinc-600 max-w-2xl">
+              Projects I plan developing as I continue improving my analytics,
+              systems, and decision-support skills.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                title: "Financial Trend Dashboard",
+                description:
+                  "Developing an interactive financial analytics dashboard focused on identifying revenue trends, spending patterns, and performance indicators to support budgeting and forecasting decisions.",
+                tech: [],
+              },
+            ].map((project) => (
+              <div
+                key={project.title}
+                className="rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-6"
+              >
+                <h3 className="text-lg font-semibold text-zinc-900">
+                  {project.title}
+                </h3>
+                <p className="mt-2 text-sm text-zinc-600">
+                  {project.description}
+                </p>
+
+                {project.tech.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-teal-100 bg-teal-50 px-3 py-1 text-xs font-medium text-teal-800"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FOOTER NOTE */}
+        <div className="border-t border-zinc-200 pt-6">
+          <p className="text-sm text-zinc-500">
+            Every project represents something I wanted to understand better —
+            whether that’s data, systems, or how decisions get made behind the
+            scenes.
+          </p>
+        </div>
       </div>
     </Container>
   );

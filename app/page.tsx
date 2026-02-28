@@ -116,6 +116,14 @@ export default function HomePage() {
             github="https://github.com/sahvaanprice/planet3-gym-analytics-system"
             image="/images/planet3-dashboard.png"
           />
+          <ProjectCard
+            title="CineWave User Behavior Analytics"
+            description="Designed and built a simulated streaming analytics architecture to analyze user funnels, watch behavior, ad exposure, and premium upgrade conversion using SQL Server and Power BI."
+            tech={["SQL Server", "Database Design", "Power BI", "Data Modeling"]}
+            github="https://github.com/sahvaanprice/cinewave_user_behavior_analytics"
+            status="In Progress"
+            image="/images/cinewave_executive_dashboard.png" 
+          />
         </div>
 
         {/* Mobile button */}
@@ -132,11 +140,11 @@ export default function HomePage() {
       <section className="space-y-6">
   <div>
     <h2 className="text-3xl font-semibold tracking-tight">
-      Currently Building
+      Next Plans
     </h2>
 
     <p className="mt-2 text-zinc-600 max-w-2xl">
-      Projects I'm actively developing as I continue improving my analytics,
+      Projects I plan developing as I continue improving my analytics,
       systems, and decision-support skills.
     </p>
   </div>
@@ -146,11 +154,7 @@ export default function HomePage() {
       {
         title: "Financial Trend Dashboard",
         desc: "Developing an interactive financial analytics dashboard focused on identifying trends, spending patterns, and performance indicators.",
-      },
-      {
-        title: "Behavioral Analytics & Engagment Anlaysis",
-        desc: "Exploring user engagement patterns using SQL Server to generate behavior trends, retention indicators, and activity insights that support data-driven decision making.",
-      },
+      }
     ].map((item) => (
       <div
         key={item.title}
@@ -159,9 +163,6 @@ export default function HomePage() {
         <h3 className="font-semibold text-zinc-900">{item.title}</h3>
         <p className="mt-2 text-sm text-zinc-600">{item.desc}</p>
 
-        <span className="inline-block mt-4 text-xs font-medium text-teal-700 bg-teal-100 px-3 py-1 rounded-full">
-          In Progress
-        </span>
       </div>
     ))}
   </div>

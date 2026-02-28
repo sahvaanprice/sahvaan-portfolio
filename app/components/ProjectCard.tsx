@@ -8,6 +8,7 @@ type ProjectCardProps = {
   image?: string;          // preview image (local /public or remote)
   imageLink?: string;      // where the image click should go (full-size image URL)
   demo?: string;
+  status?: string; //
 };
 
 export default function ProjectCard({
@@ -17,6 +18,7 @@ export default function ProjectCard({
   github,
   image,
   imageLink,
+  status,
   demo,
 }: ProjectCardProps) {
   const primaryHref = demo || github;          // title click
@@ -49,6 +51,7 @@ export default function ProjectCard({
         )}
 
         {/* Title */}
+      <div className="flex items-start justify-between gap-3"></div>
         <h3 className="text-lg font-semibold tracking-tight text-zinc-900">
           <a
             href={primaryHref}
@@ -59,7 +62,7 @@ export default function ProjectCard({
             {title}
           </a>
         </h3>
-
+            
         {/* Description */}
         <p className="mt-2 text-sm leading-relaxed text-zinc-600">{description}</p>
 
@@ -96,6 +99,11 @@ export default function ProjectCard({
             >
               Live Demo →
             </a>
+          )}
+          {status && (
+            <span className="shrink-0 inline-block rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-800">
+              {status}
+            </span>
           )}
         </div>
       </div>
