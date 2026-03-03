@@ -21,7 +21,7 @@ export default function ProjectsPage() {
             tech={["SQL Server", "Database Design", "Power BI", "Data Modeling", "Analytics Dashboard"]}
             caseStudyHref="/projects/planet3"
             github="https://github.com/sahvaanprice/planet3-gym-analytics-system"
-            image="/images/planet3-dashboard.png"
+            image="/images/planet3_exec_dashboard.png"
           />
 
           <ProjectCard
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
             caseStudyHref="/projects/cinewave"
             github="https://github.com/sahvaanprice/cinewave-user-behavior-analytics"
             status="In Progress"
-            image="/images/cinewave_executive_dashboard.png"
+            image="/images/cinewave_exec_dashboard.png"
           />
         </div>
 
