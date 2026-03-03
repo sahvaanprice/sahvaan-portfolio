@@ -9,7 +9,7 @@ type ProjectCardProps = {
   image?: string;
   imageLink?: string;
 
-  caseStudyHref?: string; // NEW: internal route like "/projects/planet3"
+  caseStudyHref?: string; // internal route like "/projects/planet3"
 
   demo?: string;
   status?: string;
@@ -29,60 +29,62 @@ export default function ProjectCard({
   const imageHref = imageLink || caseStudyHref || demo || github || image || "#";
 
   return (
-    <div className="group relative rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-teal-200">
+    <div className="group relative rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       {/* Accent glow on hover */}
-      <div className="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-0 transition group-hover:opacity-100 bg-gradient-to-br from-teal-50 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-0 transition group-hover:opacity-100 bg-gradient-to-br from-[color:var(--accent)]/10 to-transparent" />
 
       <div className="relative z-10">
         {image && caseStudyHref && (
           <Link
             href={caseStudyHref}
-            className="mb-4 block overflow-hidden rounded-xl border border-zinc-200 bg-white p-3 cursor-pointer hover:ring-2 hover:ring-teal-200 transition"
+            className="mb-4 block overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-2)] p-3 cursor-pointer hover:ring-2 hover:ring-[color:var(--accent)]/40 transition"
             aria-label={`Open case study for ${title}`}
           >
-      <div className="relative aspect-[16/7] w-full">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="(max-width: 640px) 100vw, 50vw"
-          className="object-contain bg-white transition duration-300 group-hover:scale-[1.01]"
-        />
-      </div>
-        </Link>
-      )}
+            <div className="relative aspect-[16/7] w-full">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-contain bg-[color:var(--surface-2)] transition duration-300 group-hover:scale-[1.01]"
+              />
+            </div>
+          </Link>
+        )}
 
         {/* Title + Status */}
         <div className="flex items-start justify-between gap-3">
-        {caseStudyHref ? (
+          {caseStudyHref ? (
             <Link
               href={caseStudyHref}
-              className="text-lg font-semibold tracking-tight text-zinc-900 hover:text-teal-700 transition"
+              className="text-lg font-semibold tracking-tight text-[color:var(--foreground)] hover:text-[color:var(--accent)] transition"
             >
               {title}
             </Link>
-              ) : (
-            <span className="text-lg font-semibold tracking-tight text-zinc-900">
+          ) : (
+            <span className="text-lg font-semibold tracking-tight text-[color:var(--foreground)]">
               {title}
             </span>
           )}
 
           {status && (
-          <span className="shrink-0 inline-block rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-800">
-          {status}
-          </span>
+            <span className="shrink-0 inline-block rounded-full border border-[color:var(--accent)]/30 bg-[color:var(--accent)]/10 px-3 py-1 text-xs font-semibold text-[color:var(--accent)]">
+              {status}
+            </span>
           )}
         </div>
 
         {/* Description */}
-        <p className="mt-2 text-sm leading-relaxed text-zinc-600">{description}</p>
+        <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
+          {description}
+        </p>
 
         {/* Tech Stack */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tech.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-teal-100 bg-teal-50 px-3 py-1 text-xs font-medium text-teal-800"
+              className="rounded-full border border-[color:var(--border)] bg-[color:var(--surface-2)] px-3 py-1 text-xs font-medium text-[color:var(--muted)]"
             >
               {item}
             </span>
@@ -91,31 +93,32 @@ export default function ProjectCard({
 
         {/* Actions */}
         <div className="mt-6 flex flex-wrap items-center gap-4 text-sm font-medium">
-        {caseStudyHref && (
-          <Link
-            href={caseStudyHref}
-            className="text-teal-700 hover:text-teal-800 transition"
-          >
-            View Case Study →
-          </Link>
-        )}
+          {caseStudyHref && (
+            <Link
+              href={caseStudyHref}
+              className="text-[color:var(--accent)] hover:text-[color:var(--accent-hover)] transition"
+            >
+              View Case Study →
+            </Link>
+          )}
 
-        {github && (
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-600 hover:text-teal-700 transition"
-          >
-            GitHub →
-          </a>
-        )}
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[color:var(--muted)] hover:text-[color:var(--accent)] transition"
+            >
+              GitHub →
+            </a>
+          )}
+
           {demo && (
             <a
               href={demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-600 hover:text-teal-700 transition"
+              className="text-[color:var(--muted)] hover:text-[color:var(--accent)] transition"
             >
               Live Demo →
             </a>
