@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFileAlt } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -10,7 +11,7 @@ export default function Navbar() {
         {/* LOGO / NAME */}
         <Link
           href="/"
-          className="font-semibold text-zinc-900 hover:text-teal-600 transition"
+          className="text-lg font-semibold tracking-tight text-zinc-900 hover:text-teal-600 transition"
         >
           Sahvaan Price
         </Link>
@@ -25,17 +26,29 @@ export default function Navbar() {
             Projects
           </Link>
 
-          <Link href="/certifications" className="text-zinc-600 hover:text-teal-600 transition">
-            Certifications
-          </Link>
-
-          <Link href="/resume" className="text-zinc-600 hover:text-teal-600 transition">
-            Resume
-          </Link>
         </div>
 
         {/* SOCIAL ICONS */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
+
+        {/* Resume */}
+        <div className="relative group flex flex-col items-center">
+          <a
+            href="/Sahvaan_Price_Resume.pdf"
+            download
+            className="text-zinc-500 hover:text-teal-600 transition"
+            aria-label="Download Resume"
+          >
+            <FaFileAlt size={20} />
+          </a>
+
+          <span className="pointer-events-none absolute top-8 whitespace-nowrap rounded bg-zinc-900 px-2 py-1 text-xs text-white opacity-0 group-hover:opacity-100 transition">
+            Download Resume
+          </span>
+        </div>
+
+        {/* GitHub */}
+        <div className="relative group flex flex-col items-center">
           <a
             href="https://github.com/sahvaanprice"
             target="_blank"
@@ -46,6 +59,13 @@ export default function Navbar() {
             <FaGithub size={20} />
           </a>
 
+          <span className="pointer-events-none absolute top-8 whitespace-nowrap rounded bg-zinc-900 px-2 py-1 text-xs text-white opacity-0 group-hover:opacity-100 transition">
+            GitHub
+          </span>
+        </div>
+
+        {/* LinkedIn */}
+        <div className="relative group flex flex-col items-center">
           <a
             href="https://www.linkedin.com/in/sahvaan-p-835456322/"
             target="_blank"
@@ -55,8 +75,13 @@ export default function Navbar() {
           >
             <FaLinkedin size={20} />
           </a>
+
+          <span className="pointer-events-none absolute top-8 whitespace-nowrap rounded bg-zinc-900 px-2 py-1 text-xs text-white opacity-0 group-hover:opacity-100 transition">
+            LinkedIn
+          </span>
         </div>
 
+        </div>
       </nav>
     </header>
   );
