@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaFileAlt } from "react-icons/fa";
-import { FiHome } from "react-icons/fi";
 
 export default function Navbar() {
   return (
@@ -10,20 +9,23 @@ export default function Navbar() {
   <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
 
     <Link
-     href="/"
-     className="flex items-center gap-1.5 text-lg font-semibold tracking-tight transition"
-    >
-  {/* Rose gold icon */}
-    <FiHome
-     size={18}
-     className="text-[color:var(--warm-accent)]"
-    />
+  href="/"
+  className="flex items-center gap-2 text-lg font-semibold tracking-tight transition"
+  aria-label="Home"
+>
+  {/* Geometric blocks (matches Intro) */}
+  <div className="grid grid-cols-2 gap-1">
+    <span className="h-2.5 w-2.5 rounded-sm bg-[color:var(--accent)]" />
+    <span className="h-2.5 w-2.5 rounded-sm bg-[color:var(--accent)]" />
+    <span className="h-2.5 w-2.5 rounded-sm bg-[color:var(--warm-accent)]" />
+    <span className="h-2.5 w-2.5" />
+  </div>
 
-  {/* Blue initials */}
-    <span className="text-[color:var(--accent)] hover:text-[color:var(--accent-hover)] transition">
-     SP
-    </span>
-    </Link>
+  {/* Initials */}
+  <span className="text-[color:var(--accent)] hover:text-[color:var(--accent-hover)] transition">
+    SP
+  </span>
+</Link>
 
     <div className="hidden md:flex gap-6 text-sm font-medium">
       <Link href="/about" className="text-[color:var(--muted)] hover:text-[color:var(--accent)] transition">
@@ -41,7 +43,7 @@ export default function Navbar() {
         <a
           href="/Sahvaan_Price_Resume.pdf"
           download
-          className="text-[color:var(--muted)] hover:text-[color:var(--warm-accent)] transition transform hover:scale-105"
+          className="text-[color:var(--muted)] hover:text-[color:var(--warm-accent)] transition transform hover:scale-110"
           aria-label="Download Resume"
         >
           <FaFileAlt size={20} />
@@ -58,7 +60,7 @@ export default function Navbar() {
           href="https://github.com/sahvaanprice"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[color:var(--muted)] hover:text-[color:var(--warm-accent)] transition transform hover:scale-105"
+          className="text-[color:var(--muted)] hover:text-[color:var(--warm-accent)] transition transform hover:scale-110"
           aria-label="GitHub"
         >
           <FaGithub size={20} />
@@ -75,7 +77,7 @@ export default function Navbar() {
           href="https://www.linkedin.com/in/sahvaan-p-835456322/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[color:var(--muted)] hover:text-[color:var(--warm-accent)] transition transform hover:scale-105"
+          className="text-[color:var(--muted)] hover:text-[color:var(--warm-accent)] transition transform hover:scale-110"
           aria-label="LinkedIn"
         >
           <FaLinkedin size={20} />
