@@ -35,6 +35,10 @@ export default function Navbar() {
       <Link href="/projects" className="text-[color:var(--muted)] hover:text-[color:var(--accent)] transition">
         Projects
       </Link>
+
+      <Link href="/certifications" className="text-[color:var(--muted)] hover:text-[color:var(--accent)] transition">
+        Certifications
+      </Link>
     </div>
 
     <div className="flex items-center gap-6">
